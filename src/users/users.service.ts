@@ -16,7 +16,7 @@ export class UsersService {
       : this.repo.create({
           ...userInfo,
           permission: Permission.USER,
-          affiliateReference: null,
+          affiliateReference: '',
         });
     return this.repo.save(user);
   }

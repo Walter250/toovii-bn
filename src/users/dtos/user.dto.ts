@@ -1,5 +1,6 @@
 import { Expose } from 'class-transformer';
 import { IsEmail, IsOptional, IsString } from 'class-validator';
+import { Permission } from 'src/interfaces';
 
 export class UserDto {
   @Expose()
@@ -22,4 +23,7 @@ export class UserDto {
 
   @Expose()
   affiliateReference: string;
+
+  @Expose()
+  permission: Permission;
 }

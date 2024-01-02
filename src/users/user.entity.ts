@@ -25,8 +25,8 @@ export class User {
   phone: string;
 
   @Column()
-  affiliateReference: string | null;
-  
+  affiliateReference: string;
+
   @Column()
   password: string;
 
