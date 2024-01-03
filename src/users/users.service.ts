@@ -1,4 +1,8 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  ForbiddenException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './user.entity';
 import { Repository } from 'typeorm';
@@ -26,6 +30,9 @@ export class UsersService {
   }
 
   findOne(id: number) {
+    if (!id) {
+      throw new ForbiddenException('you are currently logged out');
+    }
     const user = this.repo.findOne({ where: { id } });
     if (!user) {
       throw new NotFoundException(`User with Id ${id} Not Found`);

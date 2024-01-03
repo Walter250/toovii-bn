@@ -4,6 +4,9 @@ import { Permission } from 'src/interfaces';
 
 export class UserDto {
   @Expose()
+  id: string;
+
+  @Expose()
   firstname: string;
 
   @Expose()

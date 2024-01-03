@@ -4,10 +4,10 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "firstname": "aristide",
+    "firstname": "walter",
     "lastname" : "isingizwe",
-    "username":"aristide2",
-    "email": "sample@sample.com",
+    "username":"aristide1",
+    "email": "sample@simple.com",
     "dateOfBirth": "2024-01-02T10:17:12.860Z",
     "phone": "0789325294",
     "password": "12345"
@@ -24,7 +24,16 @@ Content-Type: application/json
 }
 
 
+### who am i 
+
+GET http://localhost:3000/auth/who
+
 
 ### get all
 
 GET http://localhost:3000/auth/users
+
+
+### Signout 
+
+POST  http://localhost:3000/auth/logout
