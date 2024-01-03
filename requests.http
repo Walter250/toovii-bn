@@ -13,6 +13,18 @@ Content-Type: application/json
     "password": "12345"
 }
 
+### login
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "sample@sample.com",
+    "password": "12345"
+}
+
+
+
 ### get all
 
 GET http://localhost:3000/auth/users

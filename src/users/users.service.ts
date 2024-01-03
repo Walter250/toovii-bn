@@ -33,6 +33,14 @@ export class UsersService {
     return user;
   }
 
+  findEmail(email: string) {
+    return this.repo.find({ where: { email } });
+  }
+
+  findUserName(username: string) {
+    return this.repo.find({ where: { username } });
+  }
+
   async update(id: number, attrs: Partial<User>) {
     const currentUser = await this.findOne(id);
     if (!currentUser) {
